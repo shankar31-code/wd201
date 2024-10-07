@@ -1,6 +1,8 @@
 
 const http =require("http");
 const fs = require("fs");
+const args = require("minimist")(process.argv);
+const port = args.port||3000;
 let homecontent="";
 let projectcontent="";
 let registercontent="";
@@ -25,7 +27,7 @@ fs.readFile("./registration.html",(err,register)=>{
     }
     registercontent=register;
 });
-http.createServer((req,res)=>{
+ const server=http.createServer((req,res)=>{
     let url =req.url;
     res.writeHeader(200,{"content-Type":"text/html"});
     switch(url)
@@ -43,4 +45,5 @@ http.createServer((req,res)=>{
                 res.end();
                 break;
     }
-}).listen(3000);
+})
+     server.listen(port);
