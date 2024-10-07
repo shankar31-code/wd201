@@ -36,7 +36,7 @@ fs.readFile("./registration.html",(err,register)=>{
             res.write(projectcontent);
             res.end();
             break;
-           case "/registration.html":
+           case "/registration":
             res.write(registercontent);
             res.end();
             break;
