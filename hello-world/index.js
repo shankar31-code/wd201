@@ -1,4 +1,4 @@
-const hello=()=>{
-    console.log("hello github");
-};
-hello();
+let hell=()=>{
+    console.log("hello world");
+}
+hell()
