@@ -4,15 +4,16 @@
     "eslint": "^9.12.0",
     "globals": "^15.10.0",
     "husky": "^9.1.6",
+    "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.3.3"
   },
   "lint-staged": {
-  "*.js": [
-    "eslint",
-    "prettier --write ."
-  ]
-},
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
+  },
   "name": "wd2",
   "version": "1.0.0",
   "main": "index.js",
@@ -69,7 +70,8 @@
     "yaml": "^2.5.1"
   },
   "scripts": {
-    "test": ""
+    "test": "jest",
+    "prepare": "husky"
   },
   "author": "",
   "license": "ISC",
