@@ -1,4 +1,6 @@
+
 {
+  
   "devDependencies": {
     "@eslint/js": "^9.12.0",
     "eslint": "^9.12.0",
@@ -8,6 +10,21 @@
     "lint-staged": "^15.2.0",
     "prettier": "^3.3.3"
   },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      
+      "no-console": "off"
+    }
+  },
+  
+ 
   "lint-staged": {
     "*.js": [
       "eslint",
