@@ -1,4 +1,4 @@
-let hell=()=>{
-    console.log("hello world");
-}
-hell()
+let hell = () => {
+  console.log("hello world");
+};
+hell();
