@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 const http = require("http");
 const fs = require("fs");
 const args = require("minimist")(process.argv);
@@ -32,7 +33,7 @@ const server = http.createServer((req, res) => {
       res.write(projectcontent);
       res.end();
       break;
-    case "/registration.html":
+    case "/registration":
       res.write(registercontent);
       res.end();
       break;
@@ -42,7 +43,4 @@ const server = http.createServer((req, res) => {
       break;
   }
 });
-
-server.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}/`);
-});
+server.listen(port);
